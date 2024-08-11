@@ -3,7 +3,11 @@ public class Aluno extends Pessoa {
     private int matricula;
     private String curso;
 
-    public void cancelarMatricula() {
+    protected void pagarMensalidade() {
+        System.out.println("Mensalidade paga.");
+    }
+
+    public final void cancelarMatricula() {
         System.out.println("Matrícula será cancelada.");
     }
 

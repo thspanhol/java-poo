@@ -38,11 +38,55 @@ public class Main {
         //l[1].status();
 
         Luta UFC01 = new Luta();
-        UFC01.marcarLuta(l[0], l[1]);
-        UFC01.lutar();
-        l[0].status();
-        l[1].status();
+        //--UFC01.marcarLuta(l[0], l[1]);
+        //--UFC01.lutar();
+        //--l[0].status();
+        //--l[1].status();
 
+        // Herança
+        //Pessoa p1 = new Pessoa(); Classe Abstrata
+        Aluno p2 = new Aluno();
+        Professor p3 = new Professor();
+        Funcionario p4 = new Funcionario();
+        Bolsista p5 = new Bolsista();
+
+        //p1.setNome("Pessoa");
+        p2.setNome("Aluno");
+        p3.setNome("Professor");
+        p4.setNome("Funcionário");
+        p5.setNome("Bolsista");
+
+        p2.setCurso("Programação");
+        p3.setEspecialidade("Filosofia");
+        p4.setSetor("Diretoria");
+
+        //--p2.pagarMensalidade();
+        //--p5.pagarMensalidade();
+        //--p2.cancelarMatricula();
+        //--p5.cancelarMatricula();
+
+        //System.out.println(p1.toString());
+        //--System.out.println(p2.toString());
+        //--System.out.println(p3.toString());
+        //--System.out.println(p4.toString());
+
+        // Polimorfismo
+        //Animal an = new Animal(); Classe Abstrata
+        Lobo lo = new Lobo();
+        Corvo co = new Corvo();
+        Serpente se = new Serpente();
+
+        // Mesmo método, diferentes retornos
+
+        // Sobreposição: Mesma assinatura, classes diferentes.
+        lo.locomover();
+        co.locomover();
+        se.locomover();
+
+        //Sobrecarga: Assinaturas diferentes, mesma classe.
+        co.agir();
+        co.agir("Caçando");
+        
     }
 
 }
