@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -86,7 +88,42 @@ public class Main {
         //Sobrecarga: Assinaturas diferentes, mesma classe.
         co.agir();
         co.agir("Caçando");
-        
+
+        // Enum: Grupo fixo de constantes.
+        DiasDaSemana dia = DiasDaSemana.SEXTA;
+
+        System.out.println(dia.getDia());
+        System.out.println(dia);
+
+        // Wrapper Classes
+        int num = 10;
+        Integer numWrapper = Integer.valueOf(10);
+
+        // Autoboxing
+        Integer numWrapper2 = 10;  // O valor int 10 é automaticamente convertido para um Integer
+        // Unboxing
+        int num2 = numWrapper2;  // O Integer numWrapper é automaticamente convertido para um int
+
+        ArrayList<Integer> lista = new ArrayList<>();
+        lista.add(10);  // O int 10 é convertido (autoboxing) para Integer e adicionado à lista
+        lista.add(20);
+        lista.add(30);
+
+        int valor = lista.get(0);  // O Integer é convertido (unboxing) de volta para int
+
+        System.out.println(lista);
+        System.out.println(valor);
+
+        // Converter String para int
+        int num3 = Integer.parseInt("123");
+        // Converter int para String
+        String str = Integer.toString(123);
+        // Verificar se um caractere é dígito
+        boolean isDigit = Character.isDigit('5');
+        System.out.println(num3 + 2);
+        System.out.println(str + " é uma string.");
+        System.out.println(isDigit);
+
     }
 
 }
